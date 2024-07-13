@@ -1,0 +1,21 @@
+{
+  "name": "daily-quest",
+  "version": "1.0.0",
+  "description": "One day at the time, one new adventure at the time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandonhv/daily-quest/blob/main/README.md"
+  },
+  "author": "Brandon Hernandez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4"
+  }
+}
