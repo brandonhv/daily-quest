@@ -6,8 +6,6 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
-  // REMOVE THIS BEFORE YOU PUT IT INTO PRODUCTION
   <React.StrictMode>
     <App />
   </React.StrictMode>
