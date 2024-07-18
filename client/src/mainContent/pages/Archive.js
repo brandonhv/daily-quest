@@ -3,7 +3,7 @@ import React from "react"
 
 const Archive = () => {
 
-    return <h1>Archive</h1>
+    return <h1>Neutral</h1>
 }
 
 export default Archive;

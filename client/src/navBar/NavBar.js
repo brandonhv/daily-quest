@@ -1,6 +1,6 @@
 const NavBar = () => {
 
-    return <h2>CAD</h2>
+    return <h2>DailyQuest</h2>
     
   }
   
