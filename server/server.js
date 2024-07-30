@@ -2,8 +2,9 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const openAIRequest = require('./openaiRequest')
 const PORT = 8080;
-const openai = require('./openaiClient');
+const makeOpenAIRequest = require('./openaiRequest')
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -15,15 +16,9 @@ app.get('/new', (req, res) => {
 
 // New endpoint to generate text
 app.post('/generate-text', async (req, res) => {
-    const { prompt } = req.body;
     try {
-        const response = await openai.createCompletion({
-            model: "text-davinci-003",
-            prompt: prompt,
-            max_tokens: 100,
-            temperature: 0.7,
-        });
-        res.json({ text: response.data.choices[0].text });
+        const result = await makeOpenAIRequest();
+        res.json(result);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -32,3 +27,4 @@ app.post('/generate-text', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
+
