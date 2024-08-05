@@ -14,7 +14,7 @@ const makeOpenAIRequest = async () => {
         "messages": [
             {
                 "role": "user",
-                "content": "Search this in the broweser please, Who won the copa america in 2024?"
+                "content": "Give me a random challenge, i feel happy. Give me the steps in 5 steps"
             }
         ],
         "temperature": 1,
@@ -35,6 +35,8 @@ const makeOpenAIRequest = async () => {
     try {
         const response = await fetch("https://api.openai.com/v1/chat/completions", requestOptions);
         const result = await response.json();
+
+        console.log("here from Controler: ", result)
 
         // This same message is the one that you want to give so you may Display this data into the Main content when happy buttom is press
         console.log(result.choices[0].message.content);

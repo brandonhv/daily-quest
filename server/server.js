@@ -2,9 +2,13 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const openAIRequest = require('./openaiRequest')
+const openAIRequest = require('./controllers/openaiRequest')
 const PORT = 8080;
-const makeOpenAIRequest = require('./openaiRequest')
+const cors = require('cors')
+const makeOpenAIRequest = require('./controllers/openaiRequest')
+
+
+app.use(cors());
 
 // Middleware to parse JSON bodies
 app.use(express.json());
