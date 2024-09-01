@@ -8,7 +8,7 @@ const SideBar = () => {
   return (
     
         <ul className="all-buttoms">
-            <li><Link to="/" className="side-buttoms">😊</Link></li>
+            {/* <li><Link to="/" className="side-buttoms">😊</Link></li> */}
             <li><Link to="/archive" className="side-buttoms">😐</Link></li>
             <li><Link to="/projects" className="side-buttoms">🧐</Link></li>
             <li><Link to="/scheduale" className="side-buttoms">😢</Link></li>
