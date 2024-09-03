@@ -14,7 +14,7 @@ const makeOpenAIRequest = async () => {
         "messages": [
             {
                 "role": "user",
-                "content": "Give me a random challenge, i feel happy. Give me the steps in 5 steps"
+                "content": "What is the name of your model?"
             }
         ],
         "temperature": 1,

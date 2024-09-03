@@ -20,12 +20,14 @@ app.get('/new', (req, res) => {
 
 // New endpoint to generate text
 app.post('/generate-text', async (req, res) => {
-    try {
-        const result = await makeOpenAIRequest();
-        res.json(result);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
+    // try {
+    //     const result = await makeOpenAIRequest();
+    //     res.json(result);
+    // } catch (error) {
+    //     res.status(500).json({ error: error.message });
+    // }
+
+    res.send("Weeee we won;t be using the AI call no more")
 });
 
 app.listen(PORT, () => {
