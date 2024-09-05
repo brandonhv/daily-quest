@@ -2,6 +2,8 @@ require('dotenv').config({ path: '../.env' });
 const fetch = require('node-fetch');
 
 
+// This code is the one that connects to the chatGPT API
+
 // This code should be activate when the happy buttom is clicked
 const makeOpenAIRequest = async () => {
     const myHeaders = {
