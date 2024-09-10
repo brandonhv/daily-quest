@@ -3,17 +3,20 @@ const db = require('../database/mongodb')
 
 const questsController = {};
 
+// We can create the logic that choses the random challenge here.
+
+
+
 
 questsController.getQuest = async (req, res, next) => {
 
     try {
 
-        const getNewQuest = await db.Quests.find({mode: "walking"})
+        const getNewQuest = await db.Quests.find({mode: "Bycicle"})
 
-        console.log(getNewQuest)
-        // here we will do a call to the database, and in this case we are just going to ask for a chellenge in specific
+        const questToSend = getNewQuest[0].quest;
 
-        res.locals.message = {weeee: "This is comming from the controllers"}
+        res.locals.message = {oneQuest: questToSend}
 
 
         next();

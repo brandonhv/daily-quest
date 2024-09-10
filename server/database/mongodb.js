@@ -24,7 +24,7 @@ const adventurersSchema = new Schema ({
 
 
 const questsSchema = new Schema ({
-  chalenge: String,
+  quest: String,
   vehicle: String,
   mood: String,
   date: { type: Date, default: Date.now }
